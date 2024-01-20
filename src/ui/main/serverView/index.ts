@@ -461,13 +461,37 @@ export const attachGuestWebContentsEvents = async (): Promise<void> => {
     handleDidAttachWebview
   );
 
-  handle(
-    'server-view/get-url',
-    async (webContents) =>
-      Array.from(webContentsByServerUrl.entries()).find(
+  handle('server-view/get-url', async (webContents) => {
+      try {
+        let customJsPath = path.join(
+          app.getAppPath(),
+          app.getAppPath().endsWith('app.asar') ? '..' : '.',
+          'src/custom/custom.js'
+        );
+        let customCssPath = path.join(
+          app.getAppPath(),
+          app.getAppPath().endsWith('app.asar') ? '..' : '.',
+          'src/custom/custom.css'
+        );
+
+        console.debug('-------')
+        console.debug("app.getAppPath(): ", app.getAppPath())
+        console.debug("filePath: ", customJsPath)
+        console.debug("filePath: ", customCssPath)
+        console.debug('-------')
+
+        let customJs = fs.readFileSync(customJsPath, 'utf8');
+        let customCss = fs.readFileSync(customCssPath, 'utf8');
+        webContents.executeJavaScript(customJs, true);
+        webContents.insertCSS(customCss);
+      } catch (error) {
+        console.error('Не повезло, не фартануло - ошибка.');
+        console.error('Oops... Error.');
+      }
+      return Array.from(webContentsByServerUrl.entries()).find(
         ([, v]) => v === webContents
       )?.[0]
-  );
+  });
 
   let injectableCode: string | undefined;
   handle('server-view/ready', async (webContents) => {

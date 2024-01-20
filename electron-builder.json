@@ -1,9 +1,14 @@
 {
   "files": ["app/**/*", "package.json"],
-  "extraResources": ["build/icon.ico", "servers.json"],
-  "appId": "chat.rocket",
+  "extraResources": [
+    "src/custom/custom.js",
+    "src/custom/custom.css",
+    "build/icon.ico",
+    "servers.json"
+  ],
+  "appId": "chat.rocket.s.kaif",
   "protocols": {
-    "name": "Rocket.Chat",
+    "name": "Rocket.Chat.S.Kaif",
     "schemes": ["rocketchat"]
   },
   "mac": {
@@ -107,11 +112,17 @@
     "displayName": "Rocket.Chat"
   },
   "linux": {
-    "target": ["AppImage", "tar.gz", "deb", "rpm", "snap", "flatpak"],
-    "executableName": "rocketchat-desktop",
+    "target": [
+      "AppImage",
+      "snap",
+      "flatpak",
+      "deb",
+      "rpm"
+    ],
+    "executableName": "rocketchat-desktop-s-kaif",
     "category": "GNOME;GTK;Network;InstantMessaging",
     "desktop": {
-      "StartupWMClass": "Rocket.Chat",
+      "StartupWMClass": "Rocket.Chat.S.Kaif",
       "MimeType": "x-scheme-handler/rocketchat"
     },
     "artifactName": "rocketchat-${version}-${os}-${arch}.${ext}"

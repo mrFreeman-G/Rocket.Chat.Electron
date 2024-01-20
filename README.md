@@ -1,3 +1,14 @@
+# Rocket.Chat Desktop App + custom theme.
+
+##### Since I dont have access to admin on server, I've made fork of desktop app with my [custom theme for rocket.chat](https://github.com/mrFreeman-G/rocketchat-telegram-theme)
+##### There is a small change in `src/ui/main/serverView/index.ts` which loads custom css and js files.
+
+
+- change branch on `custom`
+- build app with `yarn build-linux` or `yarn build-win` or `yarn build-mac`
+
+---
+
 # Rocket.Chat Desktop App
 
 [![Travis CI Build Status](https://img.shields.io/travis/RocketChat/Rocket.Chat.Electron/master.svg?logo=travis)](https://travis-ci.org/RocketChat/Rocket.Chat.Electron)
