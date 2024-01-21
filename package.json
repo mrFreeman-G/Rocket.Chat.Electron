@@ -3,9 +3,9 @@
   "workspaces": [
     "workspaces/*"
   ],
-  "productName": "Rocket.Chat",
+  "productName": "Rocket.Chat S.Kaif",
   "name": "rocketchat",
-  "description": "Official OSX, Windows, and Linux Desktop Clients for Rocket.Chat",
+  "description": "Official OSX, Windows, and Linux Desktop Clients for Rocket.Chat (S.Kaif)",
   "version": "3.9.11",
   "author": "Rocket.Chat Support <support@rocket.chat>",
   "copyright": "© 2016-2023, Rocket.Chat",
