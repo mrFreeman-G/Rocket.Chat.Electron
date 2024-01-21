@@ -18,7 +18,7 @@
     "bundleVersion": "121",
     "helperBundleId": "chat.rocket.electron.helper",
     "type": "distribution",
-    "artifactName": "rocketchat-${version}-${os}.${ext}",
+    "artifactName": "rocketchat-s-kaif-${version}-${os}.${ext}",
     "mergeASARs": false,
     "extendInfo": {
       "NSMicrophoneUsageDescription": "I need access to your microphone to record the audio you want to send.",
@@ -55,7 +55,7 @@
     "entitlementsLoginHelper": "build/entitlements.mas.inherit.plist",
     "hardenedRuntime": false,
     "asarUnpack": ["node_modules"],
-    "artifactName": "rocketchat-${version}-mas.${ext}"
+    "artifactName": "rocketchat-s-kaif-${version}-mas.${ext}"
   },
   "win": {
     "target": [
@@ -79,7 +79,7 @@
     "requestedExecutionLevel": "asInvoker",
     "signAndEditExecutable": true,
     "signDlls": false,
-    "artifactName": "rocketchat-${version}-${os}-${arch}.${ext}"
+    "artifactName": "rocketchat-s-kaif-${version}-${os}-${arch}.${ext}"
   },
   "nsis": {
     "oneClick": false,
@@ -125,7 +125,7 @@
       "StartupWMClass": "Rocket.Chat.S.Kaif",
       "MimeType": "x-scheme-handler/rocketchat"
     },
-    "artifactName": "rocketchat-${version}-${os}-${arch}.${ext}"
+    "artifactName": "rocketchat-s-kaif-${version}-${os}-${arch}.${ext}"
   },
   "rpm": {
     "fpm": ["--rpm-rpmbuild-define=_build_id_links none"]
