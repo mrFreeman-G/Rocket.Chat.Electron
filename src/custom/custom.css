@@ -1,5 +1,5 @@
 :root {
-	--sidebar-folders-width: 75px;
+	--sidebar-folders-width: 85px;
 
 	--bg-image-1: url(https://blog.1a23.com/wp-content/uploads/sites/2/2020/02/pattern_03-150x150.png);
 	--bg-image-2: url(https://w0.peakpx.com/wallpaper/154/372/HD-wallpaper-telegram-background-whatsapp-creative-android-pattern-texture-abstract.jpg);
@@ -610,7 +610,7 @@ html[data-theme="telegram"] .rcx-message picture {
 html[data-theme="telegram"] .rcx-message > div:nth-child(2) > div:has(.rcx-message-metrics__content-item) {
 	position: absolute;
 	bottom: 0;
-	transform: translate(0, 120%);
+	transform: translate(0, 118%);
     border-radius: 20px;
     overflow: hidden;
 }
@@ -1301,14 +1301,16 @@ div.sidebar-folder:hover {
 div.sidebar-folder p {
 	margin: auto;
 	color: var(--folder-icon-color);
-	font-variant: all-petite-caps;
 	user-select: none;
-	font-weight: bold;
 	text-align: center;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
 	width: 100%;
+    font-family: var(--rcx-font-family-sans,Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Helvetica Neue","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Meiryo UI",Arial,sans-serif);
+    font-size: 14px;
+	font-weight: 600;
+	font-variant: all-petite-caps;
 }
 div.sidebar-folder.folder-selected p {
 	color: var(--folder-icon-color-selected);
